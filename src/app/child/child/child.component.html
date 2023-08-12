@@ -1,0 +1,22 @@
+<p>child works!</p>
+<h3>Values coming from parent</h3>
+<br />
+{{ name }}
+
+<input value="valFromChild" [(ngModel)]="ValFromChild" />
+<button (click)="sendValues()">Send to parent</button>
+
+<div *ngFor="let obj of arr">
+<p>{{obj}}</p>
+</div>
+
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="'1'">One</div>
+    <div *ngSwitchCase="'2'">Two</div>
+    <div *ngSwitchCase="'3'">Three</div>
+    <div *ngSwitchCase="'4'">Four</div>
+    <div *ngSwitchCase="'5'">Five</div>
+    <div *ngSwitchDefault>This is Default</div>
+  </div>
+
+  <a routerLink="/child2">Child2</a>
